@@ -30,3 +30,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_LEFT
 // #define MASTER_RIGHT
 #define EE_HANDS
+
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#define PERMISSIVE_HOLD
+#define TAPPING_TERM 300
+
+
+#define QMK_ESC_OUTPUT F7 // usually COL
+#define QMK_ESC_INPUT C6 // usually ROW
