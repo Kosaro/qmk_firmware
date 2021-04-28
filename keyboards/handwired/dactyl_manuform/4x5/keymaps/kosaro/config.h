@@ -22,20 +22,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Use I2C or Serial, not both */
 
-#define USE_SERIAL
-//#define USE_I2C
+//#define USE_SERIAL
+#define USE_I2C
 
 /* Select hand configuration */
 
 // #define MASTER_LEFT
-// #define MASTER_RIGHT
+ //#define MASTER_RIGHT
 #define EE_HANDS
 
+#define TAPPING_TERM 499
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
-#define PERMISSIVE_HOLD
-#define TAPPING_TERM 300
+//#define PERMISSIVE_HOLD
 
 
-#define QMK_ESC_OUTPUT F7 // usually COL
-#define QMK_ESC_INPUT C6 // usually ROW
