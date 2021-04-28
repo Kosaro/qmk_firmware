@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_BTN2, KC_MS_U, KC_BTN1, KC_NO, KC_NO, KC_PGUP, KC_UP, KC_HOME, KC_NO, \
         KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, \
         KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, KC_NO, KC_NO, KC_PGDN, KC_NO, KC_END, KC_NO, \
-        KC_VOLD, KC_VOLU, KC_NO, KC_NO, \
+        KC_MPLY, KC_NO, KC_MPRV, KC_MNXT, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
@@ -57,3 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
 };
 
+void keyboard_post_init_user(void) {
+  // Customise these values to desired behaviour
+  debug_enable=true;
+  //debug_matrix=true;
+  debug_keyboard=true;
+  //debug_mouse=true;
+}
