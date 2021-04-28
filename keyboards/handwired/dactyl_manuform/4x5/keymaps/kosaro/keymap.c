@@ -59,8 +59,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
-  debug_enable=true;
+  debug_enable=false;
   //debug_matrix=true;
   debug_keyboard=true;
   //debug_mouse=true;
 }
+
+bool process_key_tap(uint16_t keycode, keyrecord_t *record) {
+    if (record->tap.count > 0) {
+        // tap
+        if (record->event.pressed) {
+            register_code16(keycode);
+        } else {
+            unregister_code16(keycode);
+        }
+        return false; // disable the default action
+    }
+    // hold - use the default action
+    return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch(keycode){
+        case LALT_T(KC_LPRN):
+            return process_key_tap(KC_LPRN, record);
+        case LGUI_T(KC_RPRN):
+            return process_key_tap(KC_RPRN, record);
+        case LCTL_T(KC_LCBR):
+            return process_key_tap(KC_LCBR, record);
+        case LSFT_T(KC_RCBR):
+            return process_key_tap(KC_RCBR, record);
+        case RGUI_T(KC_UNDS):
+            return process_key_tap(KC_UNDS, record);
+        case RALT_T(KC_HASH):
+            return process_key_tap(KC_HASH, record);
+        case RCTL_T(KC_COLN):
+            return process_key_tap(KC_COLN, record);
+        default:
+            return true;
+    }
+}
+
