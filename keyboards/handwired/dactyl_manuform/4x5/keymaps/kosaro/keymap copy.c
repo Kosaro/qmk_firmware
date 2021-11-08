@@ -8,29 +8,29 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT( \
-        KC_Q,         KC_C,         KC_H,        KC_P,         KC_V,                                               KC_K, KC_Y,         KC_O,        KC_J,         KC_SCLN, \
-        LGUI_T(KC_R), LALT_T(KC_S), LT(2, KC_N), LCTL_T(KC_T), KC_G,                                               KC_W, RCTL_T(KC_U), LT(1, KC_E), RALT_T(KC_I), RGUI_T(KC_A), \
-        KC_X,         KC_M,         KC_L,        LT(1, KC_D),  KC_B,                                               KC_Z, KC_F,         KC_QUOT,     KC_COMM,      KC_DOT, \
-                                    LCTL(KC_C),  LCTL(KC_V),                                                                           KC_VOLD,     KC_VOLU, \
-                                                                    LT(3,KC_ENT), LSFT_T(KC_SPC),   LSFT_T(KC_ESC),     LT(3,KC_BSPC), \
-                                                                    KC_TAB,       KC_BSPC,          KC_CAPS,            LT(2, KC_DEL), \
-                                                                    KC_ESC,       KC_DEL,           KC_SPC,             KC_CAPS),
+        KC_Q,         KC_C,         KC_H,         KC_P,         KC_V,                                               KC_K, KC_Y,         KC_O,         KC_J,         KC_SCLN, \
+        LCTL_T(KC_R), LALT_T(KC_S), LGUI_T(KC_N), LSFT_T(KC_T), KC_G,                                               KC_W, RSFT_T(KC_U), RGUI_T(KC_E), RALT_T(KC_I), RCTL_T(KC_A), \
+        KC_X,         KC_M,         KC_L,         LT(1,KC_D),   KC_B,                                               KC_Z, LT(1,KC_F),    KC_QUOT,       KC_COMM,      KC_DOT, \
+                                    LCTL(KC_C),   LCTL(KC_V),                                                                           KC_VOLD,      KC_VOLU, \
+                                                                    LT(3,KC_ENT), LT(2,KC_SPC),     LT(2,KC_ESC), LT(3,KC_BSPC), \
+                                                                    KC_TAB,       KC_BSPC,          KC_DEL,      KC_DEL, \
+                                                                    KC_ESC,       KC_DEL,            KC_SPC,      KC_CAP),
 	[1] = LAYOUT( \
-        KC_TILD,         KC_GRV,           KC_PERC,         KC_NO,           KC_NO,                                  KC_CIRC, KC_DLR,          KC_BSLS,     KC_EXLM,         KC_PIPE, \
-        LGUI_T(KC_LCBR), LALT_T(KC_LPRN),  KC_RPRN,         LCTL_T(KC_RCBR), KC_NO,                                  KC_AMPR, RCTL_T(KC_EQL),  KC_UNDS,     RALT_T(KC_HASH), RGUI_T(KC_QUES), \
-        KC_LT,           KC_LBRC,          KC_RBRC,         KC_GT,           KC_NO,                                  KC_AT,   KC_SLASH,        KC_PLUS,     KC_MINS,         KC_ASTR, \
+        KC_TILD,         KC_GRV,           KC_PERC,         KC_NO,           KC_NO,                                  KC_CIRC, KC_DLR,          KC_BSLS,         KC_EXLM,         KC_PIPE, \
+        LCTL_T(KC_LCBR), LALT_T(KC_LPRN),  LGUI_T(KC_RPRN), LSFT_T(KC_RCBR), KC_NO,                                  KC_AMPR, RSFT_T(KC_EQL),  RGUI_T(KC_UNDS), RALT_T(KC_HASH), RCTL_T(KC_QUES), \
+        KC_LT,           KC_LBRC,          KC_RBRC,         KC_GT,           KC_NO,                                  KC_AT,   KC_SLASH,        KC_PLUS,         KC_MINS,         KC_ASTR, \
                                            LCTL(KC_Z),      LCTL(KC_X),                                                       KC_NO,           KC_NO, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                                                 KC_TRNS, KC_TRNS, RESET,   KC_TRNS),
 	[2] = LAYOUT( \
         KC_TILD,         KC_GRV,           KC_PERC,         KC_NO,           KC_NO,                                  KC_NO, KC_PGUP, KC_UP, KC_HOME, KC_NO, \
-        KC_LGUI,         KC_LALT,          KC_NO,           KC_LCTL,         KC_NO,                                  KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, \
+        LCTL_T(KC_LCBR), LALT_T(KC_LPRN),  LGUI_T(KC_RPRN), LSFT_T(KC_RCBR), KC_NO,                                  KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, \
         KC_LT,           KC_LBRC,          KC_RBRC,         KC_GT,           KC_NO,                                  KC_PGDN, LGUI(LCTL(KC_LEFT)), KC_NO, LGUI(LCTL(KC_RIGHT)), KC_END, \
                                            KC_MPLY,         KC_NO,                                                          KC_MPRV, KC_MNXT, \
+                                                                                KC_TRNS, KC_TRNS, KC_TRNS, KC_BSPC, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
-                                                                                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
-                                                                                KC_TRNS, KC_TRNS, RESET,   KC_TRNS),
+                                                                                KC_TRNS, KC_TRNS, RESET, KC_TRNS),
 	[3] = LAYOUT( \
     KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, \
         KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, \
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F11, KC_F12, KC_TRNS, KC_TRNS, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
-        KC_TRNS, KC_TRNS, RESET, KC_TRNS)
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
 };
 
 void keyboard_post_init_user(void) {
@@ -67,13 +67,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch(keycode){
         case LALT_T(KC_LPRN):
             return process_key_tap(KC_LPRN, record);
-        case LGUI_T(KC_LCBR):
+        case LGUI_T(KC_RPRN):
+            return process_key_tap(KC_RPRN, record);
+        case LCTL_T(KC_LCBR):
             return process_key_tap(KC_LCBR, record);
-        case LCTL_T(KC_RCBR):
+        case LSFT_T(KC_RCBR):
             return process_key_tap(KC_RCBR, record);
+        case RGUI_T(KC_UNDS):
+            return process_key_tap(KC_UNDS, record);
         case RALT_T(KC_HASH):
             return process_key_tap(KC_HASH, record);
-        case RGUI_T(KC_QUES):
+        case RCTL_T(KC_QUES):
             return process_key_tap(KC_QUES, record);
         default:
             return true;
