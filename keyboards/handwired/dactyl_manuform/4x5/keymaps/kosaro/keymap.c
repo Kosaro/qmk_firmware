@@ -17,16 +17,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     KC_ESC,       KC_DEL,           KC_SPC,             KC_CAPS),
 	[1] = LAYOUT( \
         KC_TILD,         KC_GRV,           KC_CIRC,         KC_NO,           KC_NO,                                  KC_PERC, KC_DLR,          KC_BSLS,     KC_EXLM,         KC_PIPE, \
-        LGUI_T(KC_LCBR), LALT_T(KC_LPRN),  KC_RPRN,         LCTL_T(KC_RCBR), KC_NO,                                  KC_AMPR, RCTL_T(KC_EQL),  KC_UNDS,     RALT_T(KC_HASH), RGUI_T(KC_QUES), \
-        KC_LT,           KC_LBRC,          KC_RBRC,         KC_GT,           KC_NO,                                  KC_AT,   KC_SLASH,        KC_PLUS,     KC_MINS,         KC_ASTR, \
+        LCTL_T(KC_LCBR), LALT_T(KC_LPRN),  LT(2, KC_RPRN),  KC_RCBR,         KC_NO,                                  KC_AMPR, LGUI_T(KC_EQL),  KC_UNDS,     RALT_T(KC_HASH), RCTL_T(KC_QUES), \
+        KC_LT,           KC_LBRC,          KC_RBRC,         LGUI(KC_GT),     KC_NO,                                  KC_AT,   KC_SLASH,        KC_PLUS,     KC_MINS,         KC_ASTR, \
                                            LCTL(KC_Z),      LCTL(KC_X),                                                       KC_NO,           KC_NO, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                                                 KC_TRNS, KC_TRNS, RESET,   KC_TRNS),
 	[2] = LAYOUT( \
         KC_TILD,         KC_GRV,           KC_PERC,         KC_NO,           KC_NO,                                  KC_NO, KC_PGUP, KC_UP, KC_HOME, KC_NO, \
-        KC_LGUI,         KC_LALT,          KC_NO,           KC_LCTL,         KC_NO,                                  KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, \
-        KC_LT,           KC_LBRC,          KC_RBRC,         KC_GT,           KC_NO,                                  KC_PGDN, LGUI(LCTL(KC_LEFT)), KC_NO, LGUI(LCTL(KC_RIGHT)), KC_END, \
+        KC_LCTL,         KC_LALT,          KC_NO,           KC_LCTL,         KC_NO,                                  KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, \
+        KC_LT,           KC_LBRC,          KC_RBRC,         KC_LGUI,         KC_NO,                                  KC_PGDN, LGUI(LCTL(KC_LEFT)), KC_NO, LGUI(LCTL(KC_RIGHT)), KC_END, \
                                            KC_MPLY,         KC_NO,                                                          KC_MPRV, KC_MNXT, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
